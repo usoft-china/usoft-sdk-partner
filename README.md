@@ -47,7 +47,7 @@
 
 ## API文档地址
 
-[账户中心 API文档地址](https://static.usoftchina.com/front/partner.html#sso2.open.IOpenLoginService)
+[账户中心 API文档地址](https://static.usoftchina.com/front/partner.html)
 
 ## 使用示例地址
 

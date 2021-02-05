@@ -72,18 +72,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.usoft.sso</groupId>
-            <artifactId>usoft-sso-external-api</artifactId>
-            <version>${spring.active.profile}-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.usoft.security</groupId>
-            <artifactId>usoft-security-external-api</artifactId>
-            <version>${spring.active.profile}-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.usoft.partner</groupId>
             <artifactId>usoft-partner-external-api</artifactId>
             <version>${spring.active.profile}-SNAPSHOT</version>

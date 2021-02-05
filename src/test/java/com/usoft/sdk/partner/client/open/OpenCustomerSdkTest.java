@@ -1,5 +1,9 @@
 package com.usoft.sdk.partner.client.open;
 
+import com.usoft.partner.external.open.api.protobuf.*;
+import com.usoft.sdk.partner.utils.ProtoBufUtil;
+import org.junit.Test;
+
 /**
  * 企业sdk测试类
  *
@@ -10,33 +14,35 @@ public class OpenCustomerSdkTest {
     /**
      * 测试地址
      */
-    private OpenCustomerSdk openEntSdk = new OpenCustomerSdk("https://ssorest.uuzcc.cn", "J5jL6X5hdc6FpzOYhxPIzqXfFvmE6D8JWYRCBW7kjK4=");
+    private OpenCustomerSdk openCustomerSdk = new OpenCustomerSdk("https://partnerrest.uuzcc.cn", "J5jL6X5hdc6FpzOYhxPIzqXfFvmE6D8JWYRCBW7kjK4=");
 
-//    @Test
-//    public void getEntSignet() throws Exception {
-//        GetEntSignetReq.Builder req = GetEntSignetReq.newBuilder();
-//        req.setEnuu(10050624);
-//        GetEntSignetResp resp = openEntSdk.getEntSignet(req);
-//        System.out.println(ProtoBufUtil.toJSON(resp));
-//    }
-//
-//    @Test
-//    public void updateEntSignet() throws Exception {
-//        UpdateEntSignetReq.Builder req = UpdateEntSignetReq.newBuilder();
-//        //企业ENUU号
-//        req.setEnuu(10050624);
-//        //公章文件
-//        AttachFile.Builder builder = AttachFile.newBuilder();
-//        // 文件编号
-////		builder.setCode("12210104974310428258");
-//        // 文件名称
-//        builder.setName("1.png");
-//        // 文件地址
-//        builder.setUrl("https://static.uuzcc.cn/appsso/12210104974125509055.png");
-//        // 文件大小
-//        builder.setSize(241571);
-//        req.setCommonFile(builder);
-//        UpdateEntSignetResp resp = openEntSdk.updateEntSignet(req);
-//        System.out.println(ProtoBufUtil.toJSON(resp));
-//    }
+    @Test
+    public void getCustomerOpenStatus() throws Exception {
+        GetCustomerOpenStatusReq.Builder req = GetCustomerOpenStatusReq.newBuilder();
+        req.setEnuu(50000103);
+        req.setCategory("trade-app");
+        GetCustomerOpenStatusResp resp = openCustomerSdk.getCustomerOpenStatus(req);
+        System.out.println(ProtoBufUtil.toJSON(resp));
+    }
+
+    @Test
+    public void getCustomerDetail() throws Exception {
+        GetCustomerDetailReq.Builder req = GetCustomerDetailReq.newBuilder();
+        req.setEnuu(50000103);
+        req.setCategory("trade-app");
+        GetCustomerDetailResp resp = openCustomerSdk.getCustomerDetail(req);
+        System.out.println(ProtoBufUtil.toJSON(resp));
+    }
+
+    @Test
+    public void openCustomer() throws Exception {
+        OpenCustomerReq.Builder req = OpenCustomerReq.newBuilder();
+        req.setEnuu(50000092);
+        req.setUu(200040391);
+        req.setCategory("trade-app");
+        req.setOpenTime("2021-02-05 15:35:30");
+        req.setInviteCode("DD6666");
+        OpenCustomerResp resp = openCustomerSdk.openCustomer(req);
+        System.out.println(ProtoBufUtil.toJSON(resp));
+    }
 }
