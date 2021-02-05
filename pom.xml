@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.usoft.sdk</groupId>
-    <artifactId>usoft-sdk-basic</artifactId>
+    <artifactId>usoft-sdk-partner</artifactId>
     <version>${version.number}</version>
 
     <properties>
