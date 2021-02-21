@@ -29,9 +29,9 @@
     <groupId>com.usoft.sdk</groupId>
     <artifactId>usoft-sdk-partner</artifactId>
     <!--测试环境-->
-    <version>2.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <!--生产环境--> 
-    <version>2.0</version>
+    <version>1.0</version>
 </dependency>
 ```
 
@@ -47,7 +47,7 @@
 
 ## API文档地址
 
-[账户中心 API文档地址](https://static.usoftchina.com/front/partner.html)
+[API文档地址](https://static.usoftchina.com/front/partner.html)
 
 ## 使用示例地址
 
