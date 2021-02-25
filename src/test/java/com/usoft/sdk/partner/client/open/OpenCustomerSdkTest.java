@@ -15,6 +15,10 @@ public class OpenCustomerSdkTest {
      * 测试地址
      */
     private OpenCustomerSdk openCustomerSdk = new OpenCustomerSdk("https://partnerrest.uuzcc.cn", "J5jL6X5hdc6FpzOYhxPIzqXfFvmE6D8JWYRCBW7kjK4=");
+//    /**
+//     * 正式地址
+//     */
+//    private OpenCustomerSdk openCustomerSdk = new OpenCustomerSdk("https://partnerrest.usoftchina.com", "6Td4fgkYuFSTRkjhI1PZnQfhGMJ19mPRmRml7DX+4LE=");
 
     @Test
     public void getCustomerOpenStatus() throws Exception {
