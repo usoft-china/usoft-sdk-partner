@@ -8,7 +8,7 @@ import com.usoft.sdk.partner.utils.ProtoBufUtil;
 import java.util.Map;
 
 /**
- * 企业sdk
+ * 客户sdk
  * @author uas
  * @date 2020/8/11 15:59
  */
