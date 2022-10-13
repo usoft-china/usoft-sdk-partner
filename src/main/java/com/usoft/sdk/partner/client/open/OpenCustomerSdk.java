@@ -63,4 +63,18 @@ public class OpenCustomerSdk extends BaseSdk {
         OpenCustomerResp.Builder resp = ProtoBufUtil.toProtoBuf(OpenCustomerResp.newBuilder(), respJson);
         return resp.build();
     }
+
+    /**
+     * 客户注销
+     *
+     * @param req
+     * @return
+     */
+    public LogoutCustomerResp logoutCustomer(LogoutCustomerReq.Builder req) throws Exception {
+        String url = baseUrl + "/open/customer/logout";
+        String paramJson = genSignToJson(req);
+        String respJson = HttpUtil.doPost(url, paramJson, timeout);
+        LogoutCustomerResp.Builder resp = ProtoBufUtil.toProtoBuf(LogoutCustomerResp.newBuilder(), respJson);
+        return resp.build();
+    }
 }

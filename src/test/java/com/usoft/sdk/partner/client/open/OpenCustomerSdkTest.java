@@ -45,4 +45,16 @@ public class OpenCustomerSdkTest {
         OpenCustomerResp resp = openCustomerSdk.openCustomer(req);
         System.out.println(ProtoBufUtil.toJSON(resp));
     }
+
+    @Test
+    public void logoutCustomer() throws Exception {
+        LogoutCustomerReq.Builder req = LogoutCustomerReq.newBuilder();
+        //enuu
+        req.setEnuu(10047536);
+        //系统类型（trade-app：SAAS贸易版  make-app：SAAS制造版）
+        req.setCategory("trade-app");
+
+        LogoutCustomerResp resp = openCustomerSdk.logoutCustomer(req);
+        System.out.println(ProtoBufUtil.toJSON(resp));
+    }
 }
