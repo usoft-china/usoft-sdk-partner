@@ -77,4 +77,18 @@ public class OpenCustomerSdk extends BaseSdk {
         LogoutCustomerResp.Builder resp = ProtoBufUtil.toProtoBuf(LogoutCustomerResp.newBuilder(), respJson);
         return resp.build();
     }
+
+    /**
+     * 修改客户系统类型
+     *
+     * @param req
+     * @return
+     */
+    public UpdateCustomerCategoryResp updateCustomerCategory(UpdateCustomerCategoryReq.Builder req) throws Exception {
+        String url = baseUrl + "/open/customer/category/update";
+        String paramJson = genSignToJson(req);
+        String respJson = HttpUtil.doPost(url, paramJson, timeout);
+        UpdateCustomerCategoryResp.Builder resp = ProtoBufUtil.toProtoBuf(UpdateCustomerCategoryResp.newBuilder(), respJson);
+        return resp.build();
+    }
 }
